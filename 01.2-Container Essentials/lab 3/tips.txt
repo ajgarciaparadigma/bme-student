@@ -1,0 +1,9 @@
+Para la imagen 
+
+Añadir python RUN apk add python3 (después del FROM)
+
+Si users play with docker (versión online)
+Usar vi para añadir ficheros 
+La opción de Open Port nos permite invocar a un puerto como si estuviéramos en nuestro equipo
+
+
