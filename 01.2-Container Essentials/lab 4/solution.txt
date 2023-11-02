@@ -1,0 +1,5 @@
+
+# Hago login dockerhub (si no tenéis crear cuanta gratuita) y generar repository instructor
+docker login  # (apunta directamente a dockerhub)
+docker tag instructor/pytest ajgarciaparadigma/instructor:2.0
+docker push ajgarciaparadigma/instructor:2.0

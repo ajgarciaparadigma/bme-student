@@ -1,0 +1,23 @@
+
+docker search mysql
+docker run -d --name wp-db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql:8.0.24
+# Vemos los logs para sacar la password  [Note] [Entrypoint]: GENERATED ROOT PASSWORD:TasheiYeenuthee5Oos6thapie0iiGie
+docker logs wp-db
+
+# Nos metemos dentro del contenedor
+docker exec -it wp-db bash
+# Dentro del contendor
+mysql -u root -p
+# Password que hemos copiado
+show databases;
+# Estamos dentro de mysql
+create database wordpress;
+docker stop wp-db
+docker start wp-db
+# Sigue la base de datos creada si nos metemos en el contenedor
+
+
+# Borramos el contenedor
+docker rm -f wp-db
+# Al borrar el contenedor por completo y la capa de lectura escritura se ha borrado la bbdd
+
